@@ -58,6 +58,10 @@ public class EmployeeManager {
                 arrayList1.add(employees.get(i));
             }
         }
-        arrayList1.sort();
+        for (int i = 0; i < arrayList1.size(); i++) {
+            if (arrayList1.get(i).getSalary()<arrayList1.get(i+1).getSalary()){
+
+            }
+        }
     }
 }
