@@ -2,6 +2,7 @@ import Model.Employee;
 import Model.FullTimeEmployee;
 import Model.PartTimeEmployee;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class EmployeeManager {
     private static ArrayList<Employee> employees = new ArrayList<>();
@@ -61,5 +62,34 @@ public class EmployeeManager {
         }
         arrayList1.sort((((o1, o2) -> Double.compare(o1.getSalary(), o2.getSalary()))));
         return arrayList1;
+    }
+    // Chọn
+    public static void choice(){
+        int choice = -1;
+        Scanner input = new Scanner(System.in);
+        while(choice != 0) {
+            System.out.println("Menu");
+            System.out.println("1. Draw the triangle");
+            System.out.println("2. Draw the square");
+            System.out.println("3. Draw the rectangle");
+            System.out.println("0. Exit");
+            System.out.println("Enter your choice: ");
+            choice = input.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.println("Draw the triangle");
+                    break;
+                case 2:
+                    System.out.println("Draw the square");
+                    break;
+                case 3:
+                    System.out.println("Draw the rectangle");
+                    break;
+                case 0:
+                    System.exit(0);
+                default:
+                    System.out.println("No choice!");
+            }
+        }
     }
 }
