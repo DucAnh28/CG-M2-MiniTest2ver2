@@ -46,10 +46,6 @@ public class FullTimeEmployee extends Employee{
 
     @Override
     public String toString() {
-        return "FullTimeEmployee{" +
-                "bonus=" + bonus +
-                ", penalty=" + penalty +
-                ", salary=" + salary +
-                '}';
+        return super.toString() + " " + bonus + " " + penalty + " " + salary;
     }
 }

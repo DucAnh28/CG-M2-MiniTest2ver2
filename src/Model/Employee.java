@@ -62,14 +62,7 @@ public abstract class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "employeeCode=" + employeeCode +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", phoneNumber=" + phoneNumber +
-                ", email='" + email + '\'' +
-                '}';
+        return "Employee{" + "employeeCode=" + employeeCode + ", name='" + name + '\'' + ", age=" + age + ", phoneNumber=" + phoneNumber + ", email='" + email + '\'' + '}';
     }
-
 
 }
