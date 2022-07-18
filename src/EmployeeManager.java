@@ -17,6 +17,7 @@ public class EmployeeManager {
         employees.add(b4);
         System.out.println(getParttimeUnderSalary());
         System.out.println(getSumSalaryPtEmployee());
+        System.out.println(sortListFtEmployee());
     }
 
     //    1. Lay ra luong trung binh cua cong ty
@@ -51,17 +52,14 @@ public class EmployeeManager {
         return "Total salary of Part time employee : " +sum;
     }
     // 4. Sắp xếp nhân viên toàn tgian theo số lương tăng dần
-    public static ArrayList<Employee> SortListFtEmployee(){
+    public static ArrayList<Employee> sortListFtEmployee(){
         ArrayList<Employee> arrayList1 = new ArrayList<>();
         for (int i = 0; i < employees.size(); i++) {
             if (employees.get(i) instanceof FullTimeEmployee){
                 arrayList1.add(employees.get(i));
             }
         }
-        for (int i = 0; i < arrayList1.size(); i++) {
-            if (arrayList1.get(i).getSalary()<arrayList1.get(i+1).getSalary()){
-
-            }
-        }
+        arrayList1.sort((((o1, o2) -> Double.compare(o1.getSalary(), o2.getSalary()))));
+        return arrayList1;
     }
 }
